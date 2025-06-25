@@ -1,0 +1,33 @@
+.main-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90vh;
+    font-family: Nunito;
+    
+}
+
+.heading{
+    font-size: 2rem;
+    color: #2e2e2e;
+    font-weight: 600;
+    padding-bottom: 4rem;
+}
+ 
+body{
+    background-color: white;
+    
+}
+
+.t{
+    color: #000b45;
+}
+
+.sh{
+    color:#36387e;
+}
+
+.sa{
+    color: #6467bd;
+}

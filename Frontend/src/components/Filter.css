@@ -1,0 +1,128 @@
+/* src/components/Filter.css */
+*{
+  font-family: Nunito;
+}
+.filter-panel {
+  width: 100%;
+  max-width: 400px;
+  background-color: #ffffff;
+  padding: 20px;
+
+  
+}
+
+.filter-panel h3 {
+  margin-bottom: 20px;
+}
+
+.filter-panel label {
+  margin: 2rem 0 0.5rem 0;
+  display: block;
+  font-weight: 500;
+  font-family: Nunito;
+}
+
+/* Container styling */
+.slider-container {
+  margin: 20px 0;
+  padding: 0 10px;
+}
+
+/* Custom range track */
+.rc-slider {
+  margin: 10px 0;
+  height: 6px;
+}
+
+.rc-slider-rail {
+  background-color: #ddd;
+  height: 6px;
+  border-radius: 3px;
+}
+
+.rc-slider-track {
+  background-color: #007bff; /* blue highlight */
+  height: 6px;
+  border-radius: 3px;
+}
+
+/* Custom thumbs/handles */
+.rc-slider-handle {
+  width: 16px;
+  height: 16px;
+  margin-top: -5px;
+  border: 2px solid #007bff;
+  background-color: white;
+  cursor: grab;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.rc-slider-handle:active {
+  cursor: grabbing;
+}
+
+/* Optional tooltip on hover */
+.rc-slider-handle:hover {
+  border-color: #0056b3;
+}
+
+
+.filter-panel select {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #6b6b6b; /* or any color you like */
+  padding: 6px 4px;
+  outline: none;
+  max-width: 22rem;
+  font-size: 14px;
+  transition: border-color 0.3s;
+  font-family: Nunito;
+  background-color: white;
+}
+
+
+.filter-panel button {
+  background-color: #1d67b7;
+  color: white;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.filter-panel button:hover {
+  background-color: #0056b3;
+}
+
+.price-inputs {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.price-inputs input {
+  border: none;
+  border-bottom: 2px solid #6b6b6b; /* or any color you like */
+  padding: 6px 4px;
+  outline: none;
+  max-width: 15rem;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.price-inputs input:focus {
+  border-bottom-color: #0056b3;
+}
+
+
+/* Remove toggle button styling */
+.filter-toggle-btn {
+  display: none;
+}
+
+
+.filter-btn{
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+
+}

@@ -1,0 +1,137 @@
+.product-container{
+    margin: 7rem auto 2rem auto;
+    margin-bottom: 2em;
+    max-width: 85%;
+    font-family: Noto Sans;
+    height: 100vh;
+}
+
+.detailed-info{
+    display: flex;
+    flex-direction: column;
+    
+}
+.img-info{
+    display: flex;
+    flex-direction: row;
+}
+.detail-page-image{
+    width: 26rem;
+    height: 26rem;
+    margin-right: 3rem;
+    border: 1px solid #efefef;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+
+.analysis {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+  gap: 2rem;
+  height: 30rem; /* or more if needed */
+}
+
+.graph-wrapper {
+  flex: 0.8;
+}
+
+
+.product-header{
+    font-size: 1.2rem ;
+    font-weight: 500
+}
+
+.product-details{
+    display: flex;
+    flex-direction: column;
+    
+    gap: 1rem;
+}
+
+.detail-page-price{
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.detail-page-product-info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+.reviews{
+    color:rgb(100, 100, 100);
+    font-weight:600
+}
+.button{
+    text-decoration: none;
+    font-family: Noto Sans;
+    color: rgb(255, 255, 255);
+    padding: 0.8rem 1rem 0.8rem 1rem;
+    background-color: rgb(0, 77, 209);
+    width: fit-content;
+    border-radius: 6px;
+    margin-top: 1rem;
+}
+
+.button:hover{
+    opacity: 0.5;
+}
+
+
+.recommendation {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  width: fit-content;
+  transition: background-color 0.3s ease;
+}
+
+.recommendation.success {
+  background-color: #d1fae5; /* green-100 */
+  color: #065f46; /* green-800 */
+  border: 1px solid #c4ffcc;
+}
+
+.recommendation.warning {
+  background-color: #fef9c3; /* yellow-100 */
+  color: #92400e; /* yellow-800 */
+  border: 1px solid #fff1b8;
+}
+
+.recommendation.danger {
+  background-color: #fee2e2; /* red-100 */
+  color: #991b1b; /* red-800 */
+  border: 1px solid #fee2e2;
+}
+
+.recommendation.default {
+  background-color: #f3f4f6; /* gray-100 */
+  color: #374151; /* gray-700 */
+  border: 1px solid #d1d5db;
+}
+
+.min-max-container {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+.min{
+    background-color: rgb(230, 249, 230);
+    padding: 1rem;
+    border-left: 3px solid rgb(0, 121, 0);
+    border-radius: 6px;
+    color: #00291d;
+}
+
+.max{
+    background-color: #fee2e2;
+    border-left: 3px solid rgb(127, 0, 0);
+    padding: 1rem;
+    border-radius: 6px;
+    color: #3c0000;
+}

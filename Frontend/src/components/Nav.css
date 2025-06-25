@@ -1,0 +1,73 @@
+.nav {
+  background-color: #ffffff;
+  font-family: Noto Sans;
+  color: #434343;
+  padding: 2rem 1rem 2rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 10rem;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  max-width: 90%;
+}
+li{
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  
+}
+.bi-box-seam-fill{
+    color: #36387e !important;
+    font-size: 1.35rem;
+    padding-right: 0.5rem;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+
+.nav-link {
+  text-decoration: none;
+  color: #36387e;
+  font-weight: 600;
+
+}
+
+.nav-link:hover {
+  opacity: 0.5;
+}
+
+
+.btn{
+  color: #ffffff;
+  padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+  border-radius: 5px;
+  border: 1px solid #6467bd;
+  display: flex;
+  align-items: center;      
+  border-radius: 0.5rem;
+  font-weight: 500;
+
+}
+
+.bi-bookmark-fill{
+  font-size: 1rem;
+  color: #36387e;
+  padding: 0rem 0.7rem 0 0;
+}
+
+.btn-bm{
+  padding: 0.7rem 0.7rem 0.7rem 0.7rem;
+}

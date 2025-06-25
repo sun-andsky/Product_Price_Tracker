@@ -1,0 +1,147 @@
+.bookmark{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #cecece;
+  font-family: Noto sans;
+}
+
+.error-msg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 4rem;
+  border: 1px solid #ededed;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px 4px #99999927;
+}
+
+/* Most important fix */
+.wishlist-page {
+  margin-top: 8rem;
+  width: 88%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  min-height: 100vh;
+  margin: auto;
+}
+
+body, html, #root {
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Grid layout */
+.wishlist-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  padding: 0 1rem;
+}
+
+/* Product card */
+.wishlist-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+.bookmark-product-detail{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  max-width: 60%;
+  gap: 1.2rem;
+  
+}
+.product-price-bookmark{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.product-name{
+  color: black;
+  font-family: Noto sans;
+  font-size: 1rem;
+}
+.product-bookmark-img{
+  width: 17rem;
+  height: auto;
+  
+  margin: 2rem;
+}
+
+
+.wishlist-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+/* Buy button */
+.buy-link {
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.buy-link:hover {
+  background-color: #0056b3;
+}
+
+/* Remove button */
+button {
+  cursor: pointer;
+  margin-top: 0.5rem;
+  border: none;
+  background-color: white;
+}
+
+button:hover {
+  opacity: 0.5;
+}
+
+.trash{
+  font-size: 1.5rem;
+  color: #585858;
+}
+
+
+
+
+/* Responsive text */
+@media (max-width: 500px) {
+  .wishlist-page h1 {
+    font-size: 1.7rem;
+  }
+
+  .wishlist-card h3 {
+    font-size: 1rem;
+  }
+
+  .wishlist-card p {
+    font-size: 0.95rem;
+  }
+}

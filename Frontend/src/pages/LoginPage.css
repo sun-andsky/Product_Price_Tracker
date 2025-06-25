@@ -1,0 +1,173 @@
+/* src/pages/LoginPage.css */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Rethink Sans;
+}
+
+html, body, #root {
+  height: 100%;
+  
+}
+
+.logo-brand{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.icon{
+  color: white !important;
+  font-size: 1.5rem;
+}
+
+.logo-brand p{
+  color: white;
+  font-size: 1.2rem;
+}
+
+
+/* Wrapper to center login box */
+.page-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(180deg,#000935 0%, rgb(54, 56, 126) 46%, rgba(65, 69, 163, 1) 65%, rgba(100, 103, 189, 1) 96%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login{
+  font-size: 1.4rem;
+  color: #000935;
+  margin-bottom: 1rem;
+}
+
+
+/* Login form container */
+.login-container {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 430px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Form elements */
+
+.login-form{
+  margin-top: 2rem;
+}
+
+.login-form input {
+  width: 95%;
+  padding: 12px 14px;
+  margin: 12px 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #9ea0b3;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.login-form input:focus {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #000b6b;  
+  outline: none;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #193b7a;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #204b99;
+}
+
+/* Messages */
+.message {
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.message.success {
+  background-color: #e6f7ec;
+  border: 1px solid #3cba54;
+  color: #2e7d32;
+}
+
+.message.error {
+  background-color: #ffe6e6;
+  border: 1px solid #d32f2f;
+  color: #b71c1c;
+}
+
+/* Signup link */
+.signup-link {
+  margin-top: 25px;
+  font-size: 15px;
+  color: #444;
+}
+
+.signup-link a {
+  color: #2e5aac;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Optional user list styling */
+.user-list {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.user-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.user-list li {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
