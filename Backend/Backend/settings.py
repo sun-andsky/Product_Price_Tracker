@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure--@3%*k3pq8g=7cn*_z5@$4(6ci9!6o&u)py=asfl(alj1e)*a6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+import os
 ALLOWED_HOSTS = ['*']
 
 
@@ -148,8 +149,12 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-STATIC_URL = 'static/'
-
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
