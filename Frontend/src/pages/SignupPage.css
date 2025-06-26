@@ -168,3 +168,29 @@ html, body, #root {
   font-size: 14px;
   margin-bottom: 5px;
 }
+
+
+
+/* Signup toast styling */
+.signup-toast {
+  background-color: #020238;
+  color: #fff;
+  font-family: Rethink sans;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  border-left: 5px solid #84f9af;
+  padding: 12px 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.signup-toast--error {
+  border-left-color: #ef4444 !important;
+}
+
+.signup-toast--warn {
+  border-left-color: #facc15 !important;
+}
+
+.signup-toast--success {
+  border-left-color: #84f9af !important;
+}

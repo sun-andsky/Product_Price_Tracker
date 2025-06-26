@@ -1,5 +1,6 @@
 // api.js
-const BASE_URL = "/api";
+const BASE_URL = "http://localhost:8000/api";
+;
 
 
 // Utility to get the saved token
@@ -53,21 +54,20 @@ export const loginUser = async (data) => {
 
 // ---------- AUTHENTICATED API (User List) ----------
 export const fetchUsers = async () => {
-  const token = getToken();
+  const token = localStorage.getItem("authToken"); // ✅ Make sure token is stored
   if (!token) return { error: "No auth token found" };
 
   const res = await fetch(`${BASE_URL}/users/`, {
-    method: "GET",
     headers: {
-      "Authorization": `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NDBkYmJkNWNiNzYxMmJiMDVmNmM5NSIsInVzZXJuYW1lIjoic2FtIn0.qemFpILpJQRE4dkUYTDYYHMgVR_-35vSH3TI9A_XNxw` ,
+      Authorization: `Bearer ${token}`,  // ✅ Proper token header
       "Content-Type": "application/json",
     },
   });
 
   if (!res.ok) return { error: "Unauthorized or failed" };
-
   return res.json();
 };
+
 
 // ---------- PRODUCT APIs ----------
 export async function fetchSuggestions(query = "") {

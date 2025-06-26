@@ -102,9 +102,9 @@
 .price-inputs input {
   border: none;
   border-bottom: 2px solid #6b6b6b; /* or any color you like */
-  padding: 6px 4px;
+  padding: 15px 4px;
+  max-width: 8rem;
   outline: none;
-  max-width: 15rem;
   font-size: 14px;
   transition: border-color 0.3s;
 }

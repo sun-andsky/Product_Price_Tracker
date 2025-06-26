@@ -31,9 +31,6 @@
   text-decoration: none;
 }
 
-
-
-
 .products-grid {
   display: flex;
   flex-direction: column;
@@ -115,16 +112,12 @@
   align-items: center;
 }
 
-
-
 .wishlist-message {
   color: green;
   text-align: center;
   font-weight: 500;
   margin-top: 0.5rem;
 }
-
-
 
 .search-main-container {
   display: flex;
@@ -145,7 +138,7 @@
 .filter{
   display: flex;
   flex-direction: row;
-  gap:17.6rem;
+  gap:15.5rem;
 
 }
 #filter-icon{
@@ -196,7 +189,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   z-index: 10000;
   font-weight: 500;
-  animation: slideIn 0.3s ease-out;
+  animation: slideIn 8s ease-out;
 }
 
 /* Optional smooth entrance */

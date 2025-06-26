@@ -1,43 +1,48 @@
-// src/pages/LoginPage.jsx
 import React, { useState } from "react";
 import { loginUser, fetchUsers } from "../api/api";
 import { useNavigate, Link } from "react-router-dom";
+import { toast } from "react-toastify"; // ✅ Add toast
 import "./LoginPage.css";
 
 function LoginPage() {
   const [form, setForm] = useState({ email: "", password: "" });
-  const [token, setToken] = useState(null);
-  const [error, setError] = useState("");
   const [users, setUsers] = useState([]);
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    setError("");
+
     const result = await loginUser(form);
 
     if (result.token) {
-      setToken(result.token);
       localStorage.setItem("authToken", result.token);
+      toast.success("✅ Login successful", { className: "login-toast" });
+
       setForm({ email: "", password: "" });
 
       const userList = await fetchUsers();
       if (userList.error) {
-        setError(userList.error);
+        toast.error("Failed to fetch users");
       } else {
         setUsers(userList.signed_up_users || []);
-        navigate("/"); // Redirect to main page
       }
+
+      navigate("/"); // ✅ Redirect to main page
     } else {
-      setError(result.error || "Login failed");
+      if (result.error.includes("password")) {
+        toast.error("❌ Incorrect password", { className: "login-toast" });
+      } else if (result.error.includes("User not found")) {
+        toast.warn("🚫 No user with this email", { className: "login-toast" });
+      } else {
+        toast.error(result.error || "Login failed");
+      }
     }
   };
 
   return (
-    
     <div className="page-wrapper">
       <div className="logo-brand">
-        <i class="bi bi-box-seam-fill icon"></i>
+        <i className="bi bi-box-seam-fill icon"></i>
         <p>Price Tracker</p>
       </div>
       <div className="login-container">
@@ -59,11 +64,6 @@ function LoginPage() {
           />
           <button type="submit">Login</button>
         </form>
-
-        {error && <p className="message error">❌ {error}</p>}
-        {token && !error && (
-          <p className="message success">✅ Logged in! Token saved.</p>
-        )}
 
         {users.length > 0 && (
           <div className="user-list">

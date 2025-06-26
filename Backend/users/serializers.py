@@ -12,6 +12,12 @@ class SignupSerializer(serializers.Serializer):
             raise serializers.ValidationError("Email already registered")
         return value
 
+    def validate_username(self, value):
+        if User.objects(username=value).first():
+            raise serializers.ValidationError("Username already taken")
+        return value
+
+
 
 class LoginSerializer(serializers.Serializer):
     email = serializers.EmailField()

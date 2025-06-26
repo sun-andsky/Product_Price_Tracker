@@ -16,42 +16,51 @@ from bson import ObjectId
 
 SECRET_KEY = settings.SECRET_KEY
 
-
 class SignupView(APIView):
-    authentication_classes = [JWTAuthentication]
+    # Remove JWT auth globally to allow public POST access
+    authentication_classes = []
 
     def get_permissions(self):
         if self.request.method == 'POST':
-            return []  # Public signup
-        return [permissions.IsAuthenticated()]  # Auth required for GET
+            return []  # ✅ Allow anonymous signup
+        return [permissions.IsAuthenticated()]  # ✅ Require auth for GET
 
     def get(self, request):
         query = request.GET.get('q')
         users = User.objects.all()
         if query:
             users = users.filter(username__icontains=query) | users.filter(email__icontains=query)
-            # MongoEngine doesn't support Q objects like Django ORM,
-            # so separated filters and combined QuerySets using | operator.
         serializer = UserSerializer(users, many=True)
         return Response({"signed_up_users": serializer.data}, status=status.HTTP_200_OK)
 
     def post(self, request):
         serializer = SignupSerializer(data=request.data)
+
         if serializer.is_valid():
             email = serializer.validated_data["email"]
-            # FIX: use count() > 0 instead of filter().exists()
+            username = serializer.validated_data["username"]
+
+            # ✅ Check for existing email
             if User.objects(email=email).count() > 0:
                 return Response({"error": "Email already registered"}, status=status.HTTP_400_BAD_REQUEST)
+
+            # ✅ Check for existing username
+            if User.objects(username=username).count() > 0:
+                return Response({"error": "Username already taken"}, status=status.HTTP_400_BAD_REQUEST)
+
             try:
                 user = User(
-                    username=serializer.validated_data["username"],
+                    username=username,
                     email=email,
                     password=make_password(serializer.validated_data["password"])
                 )
                 user.save()
                 return Response({"message": "User created successfully"}, status=status.HTTP_201_CREATED)
             except Exception as e:
+                # Log or return clean error
                 return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+        # Return serializer validation errors
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 

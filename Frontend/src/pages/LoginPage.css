@@ -171,3 +171,27 @@ html, body, #root {
   font-size: 14px;
   margin-bottom: 5px;
 }
+
+
+
+.login-toast {
+  background-color: #020238;       /* Dark theme */
+  color: #ffffff;  
+  border-radius: 6px;
+  font-family: Rethink sans;                /* White text */
+  border-left: 5px solid #84f9af; /* Green for success */
+  font-weight: 500;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+}
+
+/* Toast types override border color */
+.login-toast--error {
+  border-left-color: #ef4444 !important; /* Red */
+}
+.login-toast--warn {
+  border-left-color: #f59e0b !important; /* Orange */
+}
+.login-toast--success {
+  border-left-color: #84f9af !important; /* Green */
+}

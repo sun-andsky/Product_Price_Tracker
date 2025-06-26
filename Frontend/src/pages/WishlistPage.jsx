@@ -19,11 +19,11 @@ function WishlistPage() {
         if (Array.isArray(data)) {
           setWishlist(data);
         } else {
-        setError(data?.error || "Please log in to view wishlist");
+        setError(data?.error || "Please log in to view Bookmarks");
         }
       } catch (err) {
-        console.error("Failed to load wishlist:", err);
-        setError("Something went wrong while loading wishlist.");
+        console.error("Failed to load Bookmarks:", err);
+        setError("Something went wrong while loading Bookmarks.");
       }
     };
 
@@ -42,7 +42,7 @@ function WishlistPage() {
       {error ? (
         <p className="error-msg">{error}</p>
       ) : wishlist.length === 0 ? (
-        <p>Your wishlist is empty.</p>
+        <p className="no-bookmarks">No Bookmarks</p>
       ) : (
         <div className="wishlist-grid">
           {wishlist.map((product) => (
@@ -64,7 +64,7 @@ function WishlistPage() {
               </div>
               <div className="delete-button">
                   <button onClick={() => handleRemove(product.id)}>
-                  <i class="bi bi-trash trash"></i>
+                  <i class="bi bi-trash3-fill "></i>
                   </button>
                 </div>
             </div>

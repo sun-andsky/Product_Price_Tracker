@@ -1,23 +1,23 @@
 .product-container{
-    margin: 7rem auto 2rem auto;
+    margin: 8rem auto 2rem auto;
     margin-bottom: 2em;
     max-width: 85%;
-    font-family: Noto Sans;
     height: 100vh;
 }
 
 .detailed-info{
     display: flex;
     flex-direction: column;
-    
 }
 .img-info{
     display: flex;
     flex-direction: row;
 }
+
+
 .detail-page-image{
     width: 26rem;
-    height: 26rem;
+    height: auto;
     margin-right: 3rem;
     border: 1px solid #efefef;
     padding: 2rem;
@@ -28,19 +28,21 @@
 .analysis {
   display: flex;
   flex-direction: row;
-  margin-top: 2rem;
+  justify-content: center;
+  margin-top: 5rem;
   gap: 2rem;
-  height: 30rem; /* or more if needed */
+  height: 25rem; 
 }
 
 .graph-wrapper {
-  flex: 0.8;
+  flex: 0.7;
 }
 
 
 .product-header{
     font-size: 1.2rem ;
-    font-weight: 500
+    font-weight: 500;
+    max-width: 100%;
 }
 
 .product-details{
@@ -68,7 +70,7 @@
     text-decoration: none;
     font-family: Noto Sans;
     color: rgb(255, 255, 255);
-    padding: 0.8rem 1rem 0.8rem 1rem;
+    padding: 0.8rem 0.8rem 0.8rem 0.8rem;
     background-color: rgb(0, 77, 209);
     width: fit-content;
     border-radius: 6px;
@@ -78,7 +80,6 @@
 .button:hover{
     opacity: 0.5;
 }
-
 
 .recommendation {
   font-size: 1rem;
@@ -122,7 +123,7 @@
 
 .min{
     background-color: rgb(230, 249, 230);
-    padding: 1rem;
+    padding: 0.95rem;
     border-left: 3px solid rgb(0, 121, 0);
     border-radius: 6px;
     color: #00291d;
@@ -131,7 +132,7 @@
 .max{
     background-color: #fee2e2;
     border-left: 3px solid rgb(127, 0, 0);
-    padding: 1rem;
+    padding: 0.95rem;
     border-radius: 6px;
     color: #3c0000;
 }

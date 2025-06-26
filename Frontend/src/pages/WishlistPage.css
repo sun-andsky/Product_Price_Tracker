@@ -8,7 +8,9 @@
   font-family: Noto sans;
 }
 
-.error-msg{
+
+
+.error-msg ,.no-bookmarks{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,23 +21,19 @@
   box-shadow: 2px 2px 4px 4px #99999927;
 }
 
-/* Most important fix */
 .wishlist-page {
-  margin-top: 8rem;
+  padding-top: 8rem; /* ✅ Push content away from top, even while scrolling */
   width: 88%;
   display: flex;
   flex-direction: column;
   text-align: left;
+
   min-height: 100vh;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-body, html, #root {
-  height: auto;
-  display: block;
-  margin: 0;
-  padding: 0;
-}
+
 
 
 /* Grid layout */
@@ -43,6 +41,7 @@ body, html, #root {
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
+  align-items: center;
   padding: 0 1rem;
 }
 
@@ -51,10 +50,13 @@ body, html, #root {
   background: #ffffff;
   border-radius: 16px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  padding: 1.5rem;
+  padding: 1rem;
+  max-width: 90%;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  border: 1px solid #cecece;
   justify-content: space-between;
   
 }
@@ -63,7 +65,7 @@ body, html, #root {
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  max-width: 60%;
+  max-width: 50%;
   gap: 1.2rem;
   
 }
@@ -78,31 +80,26 @@ body, html, #root {
   font-size: 1rem;
 }
 .product-bookmark-img{
-  width: 17rem;
+  width: 15rem;
   height: auto;
-  
   margin: 2rem;
 }
 
 
 .wishlist-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
 }
 
 
 
-
-
-
 /* Buy button */
 .buy-link {
-  background-color: #007bff;
+  background-color: #0055af;
   color: white;
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 8px;
-  margin: 0.5rem 0;
   font-weight: 500;
   transition: background-color 0.2s ease;
 }
@@ -114,7 +111,6 @@ body, html, #root {
 /* Remove button */
 button {
   cursor: pointer;
-  margin-top: 0.5rem;
   border: none;
   background-color: white;
 }
@@ -123,9 +119,10 @@ button:hover {
   opacity: 0.5;
 }
 
-.trash{
+.bi-trash3-fill{
   font-size: 1.5rem;
-  color: #585858;
+  color: #191541;
+  margin-right: 1rem;
 }
 
 

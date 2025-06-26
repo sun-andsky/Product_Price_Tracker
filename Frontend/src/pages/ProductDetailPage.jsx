@@ -101,7 +101,7 @@ const ProductDetailPage = () => {
                   rel="noopener noreferrer"
                   className='button'
                 >
-                  View Product on {productData.Source}
+                  View on {productData.Source}
                 </a>
 
               </div>
@@ -109,7 +109,7 @@ const ProductDetailPage = () => {
             </div>
           </div>
           
-            <div className="analysis">
+          <div className="analysis">
             {/* Price History Graph */}
             {productData.Price_History && (
               <div className="graph-wrapper">
@@ -122,7 +122,7 @@ const ProductDetailPage = () => {
               <p className='min'>Minimum Price: {formatPrice(productData.Min_Price)}</p>
               <p className='max'>Maximum Price: {formatPrice(productData.Max_Price)}</p>
             </div>
-              </div>
+          </div>
 
             
           
