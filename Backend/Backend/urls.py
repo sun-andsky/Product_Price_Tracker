@@ -25,6 +25,6 @@ def home(request):  # 👈 Define the function
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/users/', include('users.urls')),
-        path('', home),  # 👈 Add this line to handle `/`
+     path('', home),  # 👈 Add this line to handle `/`
     path('api/', include('products.urls')),  # ✅ include ALL product routes from one place
 ]
