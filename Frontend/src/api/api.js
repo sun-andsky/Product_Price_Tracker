@@ -1,5 +1,5 @@
 // api.js
-const BASE_URL = "https://price-tracker-4og8.onrender.com";
+const BASE_URL = "https://price-tracker-4og8.onrender.com/api";
 
 
 
