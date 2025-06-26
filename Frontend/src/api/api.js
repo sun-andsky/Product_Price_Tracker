@@ -89,7 +89,7 @@ export const fetchProducts = async ({ query = "", min_price, max_price, sort, so
 };
 
 export async function fetchProductDetails(id) {
-  const response = await fetch(`${BASE_URL}/product/${id}/`);
+  const response = await fetch(`${BASE_URL}/products/product/${id}/`);
   if (!response.ok) {
     throw new Error("Failed to fetch product details");
   }
