@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import PriceHistoryGraph from "../components/PriceHistoryGraph";
 import './ProductDetailPage.css';
 import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
+import { BASE_URL } from "../api/api";
 
 
 const ProductDetailPage = () => {
@@ -16,7 +17,7 @@ const ProductDetailPage = () => {
       return;
     }
 
-    const url = `http://localhost:8000/api/product/${productId}/`;
+    const url = `${BASE_URL}/product/${productId}/`;
     fetch(url)
       .then((response) => {
         if (!response.ok) {

@@ -1,8 +1,5 @@
 // api.js
-const BASE_URL = "https://price-tracker-4og8.onrender.com/api";
-
-
-
+export const BASE_URL = "https://price-tracker-4og8.onrender.com/api";
 
 // Utility to get the saved token
 const getToken = () => localStorage.getItem("authToken");

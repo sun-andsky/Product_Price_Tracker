@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './UseProfile.css';
 import profileImage from '../assets/profile.jpg'; // adjust path if needed
+import { BASE_URL } from "../api/api";
 
 
 
@@ -19,7 +20,7 @@ function UserProfilePage() {
       return;
     }
 
-    fetch('http://localhost:8000/api/users/profile/', {
+    fetch(`${BASE_URL}/users/profile/`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
