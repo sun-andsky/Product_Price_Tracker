@@ -11,6 +11,7 @@ A web-based application to track prices across multiple e-commerce platforms, sa
 - 💾 **Wishlist Support** – Bookmark products and track them over time.
 - 📉 **Price Trend Charts** – Visualize product price history.
 - 🔒 **Secure Login** – JWT-based authentication for personalized experience.
+  
 
 ### Technologies
 
@@ -26,10 +27,29 @@ A web-based application to track prices across multiple e-commerce platforms, sa
 ![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=black)
 
 
-### Login/Register
+### Login | Register
 <p float="left">
-  <img src="./Screenshots/Login.png" width="49%" />
-  <img src="./Screenshots/Signup.png" width="50%" /> 
+  <img src="./Screenshots/Login.png" width="48%" />
+  <img src="./Screenshots/Signup.png" width="48%" /> 
 </p>
+
+### Home Page
+![Home Result](./Screenshots/Home_Page.png)
+
+### Search Page
+![Search Page](./Screenshots/Search_Result.png)
+
+### Product Analysis
+![Product page](./Screenshots/Product_page.png)
+
+### Bookmarks 
+![Bookmarks](./Screenshots/Bookmark_Page.png)
+
+### User Profile
+![User Profile](./Screenshots/User_Profile.png)
+
+
+
+
 
 
