@@ -104,8 +104,9 @@ export const fetchWishlist = async (token) => {
   return res.json();
 };
 
-// Add to wishlist
 export const addToWishlist = async (productId, token) => {
+  console.log("📦 Sending to wishlist:", productId);  // 👈 Add this
+
   const res = await fetch(`${BASE_URL}/users/wishlist/add/`, {
     method: "POST",
     headers: {
@@ -114,8 +115,10 @@ export const addToWishlist = async (productId, token) => {
     },
     body: JSON.stringify({ product_id: productId }),
   });
+
   return res.json();
 };
+
 
 // ✅ FIXED: Remove from wishlist
 export const removeFromWishlist = async (productId, token) => {

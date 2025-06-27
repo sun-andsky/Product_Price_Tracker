@@ -4,6 +4,7 @@ import { fetchProducts } from "../api/api";
 import './SearchResultPage.css';
 import Filter from "../components/Filter";
 import { BsBookmark, BsBookmarkFill } from "react-icons/bs";
+import { BASE_URL } from "../api/api"; // ✅ Add this at the top
 
 function SearchResultsPage() {
   const [searchParams] = useSearchParams();
@@ -25,11 +26,11 @@ function SearchResultsPage() {
   const addToWishlist = async (productId) => {
     const token = localStorage.getItem("authToken");
     if (!token) {
-      setMessage("🔒 Please log in to use wishlist.");
+      setMessage("Please log in to use wishlist.");
       return;
     }
 
-    const res = await fetch("/api/users/wishlist/add/", {
+    const res = await fetch(`${BASE_URL}/users/wishlist/add/`, {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${token}`,
@@ -41,7 +42,7 @@ function SearchResultsPage() {
     const data = await res.json();
     if (res.ok) {
       setMessage("Product Bookmarked");
-      setWishlistIds(prev => [...prev, productId]); // Add to local list
+      setWishlistIds(prev => [...prev, productId]);
       setTimeout(() => setMessage(""), 2000);
     } else {
       setMessage(data.error || "Login to Bookmark Product");
